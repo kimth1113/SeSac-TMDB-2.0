@@ -13,6 +13,10 @@
 		8CB3BE8B28B3ED5200CCF006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB3BE8928B3ED5200CCF006 /* Main.storyboard */; };
 		8CB3BE8D28B3ED5300CCF006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB3BE8C28B3ED5300CCF006 /* Assets.xcassets */; };
 		8CB3BE9028B3ED5300CCF006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB3BE8E28B3ED5300CCF006 /* LaunchScreen.storyboard */; };
+		8CB3BE9A28B3F14500CCF006 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB3BE9928B3F14400CCF006 /* ReusableViewProtocol.swift */; };
+		8CB3BE9C28B3F33F00CCF006 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB3BE9B28B3F33F00CCF006 /* MainViewController.swift */; };
+		8CB3BEA528B3FF6800CCF006 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB3BEA428B3FF6800CCF006 /* MainView.swift */; };
+		8CB3BEB528B40A2500CCF006 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB3BEB428B40A2500CCF006 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		8CB3BE8C28B3ED5300CCF006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CB3BE8F28B3ED5300CCF006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CB3BE9128B3ED5300CCF006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB3BE9928B3F14400CCF006 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		8CB3BE9B28B3F33F00CCF006 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8CB3BEA428B3FF6800CCF006 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB3BEB528B40A2500CCF006 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 		8CB3BE8228B3ED5200CCF006 /* PracticeTMDB */ = {
 			isa = PBXGroup;
 			children = (
+				8CB3BEA328B3FF5800CCF006 /* Main */,
 				8CB3BE9828B3EDAE00CCF006 /* Protocol */,
 				8CB3BE9728B3EDA600CCF006 /* Utility */,
 				8CB3BE8328B3ED5200CCF006 /* AppDelegate.swift */,
@@ -79,8 +88,18 @@
 		8CB3BE9828B3EDAE00CCF006 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				8CB3BE9928B3F14400CCF006 /* ReusableViewProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		8CB3BEA328B3FF5800CCF006 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8CB3BE9B28B3F33F00CCF006 /* MainViewController.swift */,
+				8CB3BEA428B3FF6800CCF006 /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +118,9 @@
 			dependencies = (
 			);
 			name = PracticeTMDB;
+			packageProductDependencies = (
+				8CB3BEB428B40A2500CCF006 /* SnapKit */,
+			);
 			productName = PracticeTMDB;
 			productReference = 8CB3BE8028B3ED5200CCF006 /* PracticeTMDB.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 8CB3BE7728B3ED5200CCF006;
+			packageReferences = (
+				8CB3BEB328B40A2500CCF006 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8CB3BE8128B3ED5200CCF006 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,8 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB3BE8828B3ED5200CCF006 /* ViewController.swift in Sources */,
+				8CB3BEA528B3FF6800CCF006 /* MainView.swift in Sources */,
+				8CB3BE9A28B3F14500CCF006 /* ReusableViewProtocol.swift in Sources */,
 				8CB3BE8428B3ED5200CCF006 /* AppDelegate.swift in Sources */,
 				8CB3BE8628B3ED5200CCF006 /* SceneDelegate.swift in Sources */,
+				8CB3BE9C28B3F33F00CCF006 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -376,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CB3BEB328B40A2500CCF006 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CB3BEB428B40A2500CCF006 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CB3BEB328B40A2500CCF006 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CB3BE7828B3ED5200CCF006 /* Project object */;
 }
